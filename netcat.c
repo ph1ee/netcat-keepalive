@@ -889,11 +889,11 @@ set_common_sockopts(int s)
   // Set keepalive
   if (Kflag) {
     setsockopt(s, SOL_SOCKET, SO_KEEPALIVE, &optval, sizeof(optval));
-    if (Oflag && ((optval = Oflag)>0))
+    if ((optval = Oflag)>=0)
       setsockopt(s, SOL_TCP, TCP_KEEPIDLE, &optval, sizeof(optval));
-    if (Pflag && ((optval = Pflag)>0))
+    if ((optval = Pflag)>=0)
       setsockopt(s, SOL_TCP, TCP_KEEPCNT, &optval, sizeof(optval));
-    if (Iflag && ((optval = Iflag)>0))
+    if ((optval = Iflag)>=0)
       setsockopt(s, SOL_TCP, TCP_KEEPINTVL, &optval, sizeof(optval));
   }
 }
