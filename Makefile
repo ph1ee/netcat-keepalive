@@ -68,8 +68,7 @@ aix:
 	make -e $(ALL) $(MFLAGS) XFLAGS='-DAIX'
 
 linux:
-	make -e $(ALL) $(MFLAGS) XFLAGS='-DLINUX' STATIC=-static \
-        OBJ=$(OBJ)-linux
+	make -e $(ALL) $(MFLAGS) XFLAGS='-DLINUX' OBJ=$(OBJ)-linux
 
 # irix 5.2, dunno 'bout earlier versions.  If STATIC='-non_shared' doesn't
 # work for you, null it out and yell at SGI for their STUPID default
