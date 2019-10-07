@@ -269,7 +269,7 @@ main(int argc, char *argv[])
 			break;
 		case 'P':
 			Pflag = (int)strtoul(optarg, &endp, 10);
-			if (iflag < 0 || *endp != '\0')
+			if (Pflag < 0 || *endp != '\0')
 				errx(1, "keepalive count cannot be negative");
 			break;
 		case 'I':
